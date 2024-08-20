@@ -1,0 +1,202 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Accounting Document'
+@UI.headerInfo.typeNamePlural: 'FX Variance'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'AccountingDocument'
+@UI.presentationVariant: [{
+  groupBy: [ 'TransactionCurrency', 'ProfitCenter' ],
+  total: [ 'AmountInTransactionCurrency', 'AmountInCompanyCodeCurrency', 'VarianceAmount' ]
+}]
+annotate view ZC_FXEXCEPTION_RO with
+{
+
+// Filter Parameters 
+
+//Company Code*
+  @UI.selectionField: [{
+    position: 1
+  }]
+  @Consumption.valueHelpDefinition: [{
+    association: '_CompanyCode' }]
+  @Consumption.filter.mandatory: true 
+  CompanyCode;
+  
+  
+//Ledger*
+  @UI.selectionField: [ {
+    position: 2
+  } ]
+  @Consumption.valueHelpDefinition: [{
+    association: '_SourceLedger' }]
+  @Consumption.filter.mandatory: true     
+  SourceLedger;
+  
+//Company Code Currency*
+  @UI.selectionField: [ {
+    position: 3
+  } ]
+  @Consumption.valueHelpDefinition: [{
+    association: '_CompanyCodeCurrency' }]
+  @Consumption.filter.mandatory: true
+  @EndUserText.label: 'Functional Currency'   
+  CompanyCodeCurrency;
+  
+//Exchange rate type*
+  @UI.selectionField: [ {
+    position: 4
+  } ]
+  
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+      name: 'I_ExchangeRateType',
+      element: 'ExchangeRateType'
+    }
+  }]
+  @Consumption.filter.mandatory: true
+  ExchangeRateType; 
+  
+//Processed Date
+  @UI.selectionField: [ {
+    position: 5
+  } ]
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #INTERVAL
+  ProcessedDate;
+  
+//Accounting Document
+  @UI.lineItem: [ {
+    position: 2,
+    label: 'Accounting Document'
+  } ]
+  @UI.selectionField: [ {
+    position: 6
+  } ]
+  @Consumption.valueHelpDefinition: [{
+  association: '_JournalEntryStdVH' }]
+  AccountingDocument;
+
+//GLAccount
+  @UI.lineItem: [ {
+    position: 5,
+    label: 'G/L Account'
+  } ]
+  @UI.selectionField: [ {
+    position: 7
+  } ]
+  @Consumption.valueHelpDefinition: [{
+  association: '_GLAccountInCompanyCode' }]
+  GLAccount;
+
+// ExchangeRateVariance
+  @UI.lineItem: [ {
+    position: 15 ,
+    label: 'Variance %',
+    criticality: 'VarianceCriticality'
+  } ]
+  @UI.selectionField: [ {
+    position: 8
+  } ]
+  @EndUserText.label: 'Tolerance %'
+  ExchangeRateVariance;
+
+
+
+// Line Items
+
+// Transaction Currency
+  @UI.lineItem: [ {
+    position: 1 ,
+    label: 'Transaction Currency'  
+  } ]  
+  TransactionCurrency;
+
+// Document Number --> Refer Filter Parameters ( 2 )
+
+// Posting Date 
+  @UI.lineItem: [ {
+    position: 3,
+    label: 'Posting Date'
+  } ]
+  PostingDate;
+// Line No.
+  @UI.lineItem: [ {
+    position: 4,
+    label: 'Line Item'
+  } ]
+  LedgerGLLineItem;
+  
+// Account --> Refer Filter Parameters ( 5 )
+
+// Profit Centre
+  @UI.lineItem: [ {
+    position: 6,
+    label : 'Profit Centre'
+  } ]
+  ProfitCenter;
+
+// Cost Centre
+  @UI.lineItem: [ {
+    position: 7,
+    label : 'Cost Centre'
+  } ]
+  CostCenter;
+
+// Product
+  @UI.lineItem: [ {
+    position: 8
+  } ]
+  Product;
+
+// Segment
+  @UI.lineItem: [ {
+    position: 9
+  } ]
+  Segment;
+
+// Transaction Currency Amount
+  @UI.lineItem: [ {
+    position: 10,
+    label: 'Amount In TCurr'
+  } ]
+  AmountInTransactionCurrency;
+  
+// Journal FX Rate
+  @UI.lineItem: [ {
+    position: 11,
+    label: 'Journal FX Rate'
+  } ]
+  JournalFXRate;
+  
+// Functional Currency Amount
+  @UI.lineItem: [ {
+    position: 12,
+    label: 'Amount In CCCrcy'
+  } ]
+  AmountInCompanyCodeCurrency;
+  
+// EOD Rate
+  @UI.lineItem: [ {
+    position: 13,
+    label : 'EOD Exchange Rate'
+  } ]
+  EODExchangeRate;
+  
+// Variance Amount
+  @UI.lineItem: [ {
+    position: 14 ,
+    label: 'Variance Amount'
+  } ]
+  VarianceAmount;
+  
+// Variance % --> Refer Filter Parameters ( 5 )
+
+
+
+
+
+
+
+
+
+
+}
