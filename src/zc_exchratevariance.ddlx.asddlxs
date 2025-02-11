@@ -1,0 +1,104 @@
+ @Metadata.layer: #CORE
+
+ @UI.headerInfo.typeNamePlural: 'FX Variance'
+ @UI.textArrangement: #TEXT_LAST
+
+annotate entity ZC_EXCHRATEVARIANCE with
+
+{
+  // Filter Parameters 
+  // Ledger*
+  @UI.lineItem: [ { position: 1, importance: #HIGH, emphasized: true } ]
+  @UI.selectionField: [ { position: 1 } ]
+  SourceLedger;
+
+  // Company Code*
+  @UI.lineItem: [ { position: 2, importance: #HIGH, emphasized: true } ]
+  @UI.selectionField: [ { position: 2 } ]
+  CompanyCode;
+
+  // Company Code Currency*
+  @UI.selectionField: [ { position: 3 } ]
+  CompanyCodeCurrency;
+
+  // Exchange rate type*
+  @UI.selectionField: [ { position: 4 } ]
+  ExchangeRateType;
+
+  // Processed Date*
+  @UI.selectionField: [ { position: 5 } ]
+  ProcessedDate;
+
+  // Accounting Document ( Optional )
+  @UI.lineItem: [ { position: 3, importance: #HIGH, emphasized: true, label: 'Accounting Document' } ]
+  @UI.selectionField: [ { position: 6 } ]
+  AccountingDocument;
+
+  // GLAccount ( Optional )
+  @UI.lineItem: [ { position: 6, label: 'G/L Account' } ]
+  @UI.selectionField: [ { position: 7 } ]
+  GLAccount;
+
+// ExchangeRateVariance
+  @UI.lineItem: [ { position: 16, importance: #HIGH, label: 'Variance %', criticality: 'VarianceCriticality' } ]
+  @UI.selectionField: [ { position: 8 } ]
+  ExchangeRateVariance;
+
+
+  // Line Items
+
+  // Transaction Currency
+  @UI.lineItem: [ { label: 'Transaction Currency' } ]
+  @UI.textArrangement: #TEXT_LAST
+  TransactionCurrency;
+
+  // Line No.
+  @UI.lineItem: [ { position: 4, importance: #HIGH, emphasized: true, label: 'Line Item' } ]
+  LedgerGLLineItem;
+  
+  // Posting Date 
+  @UI.lineItem: [ { position: 5, importance: #HIGH, label: 'Posting Date' } ]
+  PostingDate;
+
+  // Profit Centre
+  @UI.lineItem: [ { position: 7 } ]
+  ProfitCenter;
+
+  // Cost Centre
+  @UI.lineItem: [ { position: 8 } ]
+  CostCenter;
+
+  // Product
+  @UI.lineItem: [ { position: 9 } ]
+  Product;
+
+  // Segment
+  @UI.lineItem: [ { position: 10 } ]
+  Segment;
+
+  // Transaction Currency Amount
+  @UI.lineItem: [ { position: 11, label: 'Amount In TCurr' } ]
+  AmountInTransactionCurrency;
+
+  // Journal FX Rate
+  @UI.lineItem: [ { position: 12, label: 'Journal FX Rate' } ]
+  JournalExchRate;
+
+  // Company Currency Amount
+  @UI.lineItem: [ { position: 13, label: 'Amount In CCCrcy' } ]
+  AmountInCompanyCodeCurrency;
+
+  // EOD Rate
+  @UI.lineItem: [ { position: 14, label: 'EOD Exchange Rate' } ]
+  EODExchRate;
+
+  // Variance Amount
+  @UI.lineItem: [ { position: 15, label: 'Variance Amount' } ]
+  VarianceAmount;
+  // Variance % --> Refer Filter Parameters ( 5 )
+  
+  @UI.lineItem: [ { position: 17, label: 'Creation Date & Time' } ]
+  CreationDateTime;
+  @UI.hidden: true
+  VarianceCriticality;
+}

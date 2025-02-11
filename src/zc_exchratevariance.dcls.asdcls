@@ -1,0 +1,10 @@
+@EndUserText.label: 'Mapping role for ZC_EXCHRATEVARIANCE'
+@MappingRole: true
+define role ZC_EXCHRATEVARIANCE {
+  grant 
+    select
+      on
+        ZC_EXCHRATEVARIANCE
+          where
+            inheriting conditions from entity ZI_EXCHRATEVARIANCE;    
+}

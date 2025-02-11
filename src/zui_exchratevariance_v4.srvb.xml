@@ -4,29 +4,29 @@
   <asx:values>
    <SRVB>
     <METADATA>
-     <NAME>ZUI_FXEXCEPTION_V4</NAME>
+     <NAME>ZUI_EXCHRATEVARIANCE_V4</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>Service Binding for FXEXCEPTION report</DESCRIPTION>
+     <DESCRIPTION>Service Binding for EXCHRATEVARIANCE</DESCRIPTION>
      <RESPONSIBLE>C5378549</RESPONSIBLE>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     </METADATA>
     <CONTENT>
      <BIND_TYPE_IMPL>
-      <NAME>ZUI_FXEXCEPTION_V4</NAME>
+      <NAME>ZUI_EXCHRATEVARIANCE_V4</NAME>
      </BIND_TYPE_IMPL>
      <BIND_TYPE>ODATA</BIND_TYPE>
      <BIND_TYPE_VERSION>V4</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZUI_FXEXCEPTION_RO</SERVICE_NAME>
+       <SERVICE_NAME>ZUI_EXCHRATEVARIANCE_SRV</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
          <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
          <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zui_fxexception_ro</URI>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zui_exchratevariance_srv</URI>
           <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZUI_FXEXCEPTION_RO</NAME>
+          <NAME>ZUI_EXCHRATEVARIANCE_SRV</NAME>
          </SRVD_REF>
          <BIND_TYPE_DATA>
           <CONTENT>

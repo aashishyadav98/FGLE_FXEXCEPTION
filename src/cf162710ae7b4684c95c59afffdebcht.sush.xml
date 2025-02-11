@@ -3,26 +3,36 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <HEAD>
-    <NAME>F6138FC276872262FB8E1DF31D613F</NAME>
+    <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
     <TYPE>HT</TYPE>
-    <DISPLAY_NAME>R3TR G4BA ZUI_FXEXCEPTION_V4</DISPLAY_NAME>
+    <DISPLAY_NAME>R3TR G4BA ZUI_EXCHRATEVARIANCE_V4</DISPLAY_NAME>
    </HEAD>
    <USOBX>
     <USOBX>
-     <NAME>F6138FC276872262FB8E1DF31D613F</NAME>
+     <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
      <TYPE>HT</TYPE>
      <OBJECT>S_START</OBJECT>
      <OKFLAG>X</OKFLAG>
     </USOBX>
     <USOBX>
-     <NAME>F6138FC276872262FB8E1DF31D613F</NAME>
+     <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>F_BAF4_MDC</OBJECT>
+    </USOBX>
+    <USOBX>
+     <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>F_BKPF_BUK</OBJECT>
+    </USOBX>
+    <USOBX>
+     <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
      <TYPE>HT</TYPE>
      <OBJECT>F_FAGL_LDR</OBJECT>
     </USOBX>
     <USOBX>
-     <NAME>F6138FC276872262FB8E1DF31D613F</NAME>
+     <NAME>CF162710AE7B4684C95C59AFFFDEBC</NAME>
      <TYPE>HT</TYPE>
-     <OBJECT>K_PCA_MD</OBJECT>
+     <OBJECT>GLE_MCA</OBJECT>
     </USOBX>
    </USOBX>
    <USOBX_EXT>
@@ -40,6 +50,30 @@
      <EXCEP_ICON>@08@</EXCEP_ICON>
     </item>
     <item>
+     <OBJECT>F_BAF4_MDC</OBJECT>
+     <TTEXT>FDB: Market Data Area</TTEXT>
+     <OCLSS>FSMD</OCLSS>
+     <PS_POSID>CA-FS-MKD</PS_POSID>
+     <CI_TEXT>Not Maintained</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>New/Not Maintained</PR_TEXT>
+     <EXCEP>1</EXCEP>
+     <EXCEP_TX>Error</EXCEP_TX>
+     <EXCEP_ICON>@0A@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>F_BKPF_BUK</OBJECT>
+     <TTEXT>Accounting Document: Authorization for Company Codes</TTEXT>
+     <OCLSS>FI</OCLSS>
+     <PS_POSID>FI</PS_POSID>
+     <CI_TEXT>Not Maintained</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>New/Not Maintained</PR_TEXT>
+     <EXCEP>1</EXCEP>
+     <EXCEP_TX>Error</EXCEP_TX>
+     <EXCEP_ICON>@0A@</EXCEP_ICON>
+    </item>
+    <item>
      <OBJECT>F_FAGL_LDR</OBJECT>
      <TTEXT>General Ledger: Authorization for Ledger</TTEXT>
      <OCLSS>FI</OCLSS>
@@ -52,10 +86,10 @@
      <EXCEP_ICON>@0A@</EXCEP_ICON>
     </item>
     <item>
-     <OBJECT>K_PCA_MD</OBJECT>
-     <TTEXT>EC-PCA: Authorization Object for Profit Center Master Data</TTEXT>
-     <OCLSS>CO</OCLSS>
-     <PS_POSID>CA-GTF-FXU-FI-CO</PS_POSID>
+     <OBJECT>GLE_MCA</OBJECT>
+     <TTEXT>Authorization Checks for MCA activities</TTEXT>
+     <OCLSS>FI</OCLSS>
+     <PS_POSID>FI-GL-CU-MCA</PS_POSID>
      <CI_TEXT>Not Maintained</CI_TEXT>
      <CH_TEXT>Check</CH_TEXT>
      <PR_TEXT>New/Not Maintained</PR_TEXT>

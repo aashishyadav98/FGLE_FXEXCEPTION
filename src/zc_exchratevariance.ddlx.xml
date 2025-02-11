@@ -4,8 +4,8 @@
   <asx:values>
    <DDLX>
     <METADATA>
-     <NAME>ZE_FXEXCEPTION</NAME>
-     <DESCRIPTION>Metadata Extension for ZC_FXEXCEPTION</DESCRIPTION>
+     <NAME>ZC_EXCHRATEVARIANCE</NAME>
+     <DESCRIPTION>Metadata extension for FX rate variance</DESCRIPTION>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     </METADATA>
    </DDLX>

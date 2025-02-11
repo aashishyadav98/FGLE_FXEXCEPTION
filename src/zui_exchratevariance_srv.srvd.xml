@@ -3,12 +3,12 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <SRVD>
-    <NAME>ZUI_FXEXCEPTION_RO</NAME>
+    <NAME>ZUI_EXCHRATEVARIANCE_SRV</NAME>
     <TYPE>SRVD/SRV</TYPE>
-    <DESCRIPTION>Service Definition for ZC_FXEXCEPTION_RO</DESCRIPTION>
+    <DESCRIPTION>Service Definition for ZI_EXCHRATEVARIANCE</DESCRIPTION>
     <LANGUAGE>EN</LANGUAGE>
     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
-    <SOURCE_URI>./zui_fxexception_ro/source/main</SOURCE_URI>
+    <SOURCE_URI>./zui_exchratevariance_srv/source/main</SOURCE_URI>
     <SOURCE_TYPE>ABAP_SOURCE</SOURCE_TYPE>
     <SOURCE_ORIGIN_DESCRIPTION>ABAP Development Tools</SOURCE_ORIGIN_DESCRIPTION>
     <SRVD_SOURCE_TYPE>S</SRVD_SOURCE_TYPE>

@@ -1,0 +1,18 @@
+@EndUserText.label: 'Service Def. for ZI_EXCHRATEVARIANCE'
+define service ZUI_EXCHRATEVARIANCE_SRV {
+  expose ZC_EXCHRATEVARIANCE;
+  expose I_LedgerStdVH;
+  expose I_JournalEntryCompanyCodeVH;
+  expose I_FiscalYearForCompanyCode;
+  expose I_JournalEntryStdVH;
+  expose I_AccountingDocumentTypeStdVH;
+  expose I_ChartOfAccountsStdVH;
+  expose I_ControllingArea;
+  expose I_GLAcctInChtOfAcctsStdVH;
+  expose ZI_ExchangeRateTypeVH;
+  expose I_ProfitCenterVH;
+  expose I_CostCenterStdVH;
+  expose I_ProductVH;
+  expose I_SegmentStdVH;
+  expose I_Currency;
+}

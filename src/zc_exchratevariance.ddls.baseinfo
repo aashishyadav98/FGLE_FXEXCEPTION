@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"/BA1/F4_FXRATES"
+"ZI_EXCHRATEVARIANCE"
 ],
 "ASSOCIATED":
 [],
